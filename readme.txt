@@ -1,3 +1,3 @@
 Git is a distributed version control system.
 Git is free software.
-And I changed this file.
+I deleted the line before and wrote a new line here.
