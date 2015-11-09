@@ -1,5 +1,4 @@
 Git is a distributed version control system.
 Git is free software.
-I deleted the line before and wrote a new line here.
 
-Creating a new branch is quick and simple.
+This git is just something for my python learning.
