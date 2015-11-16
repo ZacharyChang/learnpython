@@ -47,7 +47,7 @@ class testDict(unittest.TestCase):
     def tearDown(self):
         print('tear down...')
 
-# $python -m unittest testDict.py
+# $python -m unittest test_unittest.py
 
 # .....
 # ----------------------------------------------------------------------
