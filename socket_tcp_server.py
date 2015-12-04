@@ -1,19 +1,4 @@
-import socket
-
-s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
-# 监听端口
-s.bind(('127.0.0.1',9999))
-
-s.listen(5)
-print('Waiting for connection...')
-
-while True:
-    # 接受新连接
-    socke,addr=s.accept()
-    # 创建新线程处理TCP连接
-    t=threading.Thread(target=tcplink,args=(sock,addr))
-    t.start()
+import socket,threading,time
 
 def tcplink(sock,addr):
     print('Accept new connection from %s:%s...' %addr)
@@ -26,3 +11,19 @@ def tcplink(sock,addr):
         sock.send(('Hello, %s!' %data).encode('utf-8'))
     sock.close()
     print('Connection from %s:%s closed.' %addr)
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+# 监听端口
+s.bind(('127.0.0.1',9999))
+
+s.listen(5)
+print('Waiting for connection...')
+
+while True:
+    # 接受新连接
+    sock,addr=s.accept()
+    # 创建新线程处理TCP连接
+    t=threading.Thread(target=tcplink,args=(sock,addr))
+    t.start()
+
+
