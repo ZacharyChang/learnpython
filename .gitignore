@@ -1,3 +1,4 @@
 #the sqlite database file
 test.db
 __pycache__/*
+.idea/
