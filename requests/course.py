@@ -3,7 +3,6 @@ __author__ = 'ZacharyChang'
 import requests
 import re
 
-
 class spider(object):
     def __init__(self):
         print(u'开始爬取内容。。。')
